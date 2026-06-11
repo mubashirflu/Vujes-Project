@@ -1,6 +1,22 @@
+import { createApp } from 'vue'
+import { createPinia } from 'pinia'
+
+import App from './App.vue'
+import router from './router'
 import './assets/main.css'
 
-import { createApp } from 'vue'
-import App from './App.vue'
+// ========================
+// App banao
+// ========================
+const app = createApp(App)
 
-createApp(App).mount('#app')
+// ========================
+// Plugins add karo
+// ========================
+app.use(createPinia())  // State management
+app.use(router)         // Routing
+
+// ========================
+// App mount karo
+// ========================
+app.mount('#app')

@@ -1,7 +1,8 @@
 <script setup lang="ts">
 import HelloWorld from './components/HelloWorld.vue'
 import TheWelcome from './components/TheWelcome.vue'
-import button_event from './components/button_event.vue';
+import router from './router/index.ts';
+
 </script>
 
 <template>
@@ -14,8 +15,9 @@ import button_event from './components/button_event.vue';
   </header>
 
   <main>
-    <button_event/>
-  </main>
+    <RouterView/>
+    
+    </main>
 </template>
 
 <style scoped>

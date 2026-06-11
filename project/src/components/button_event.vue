@@ -165,3 +165,26 @@ export default {
 
 <!-- =================X======================= -->
  <!-- dynamic class chnage the UI accoridng to data on Screen -->
+<template>
+    <div>
+        <h1>Dynamic Class </h1>
+        <p :class="{done :isDone}">
+            MyTask
+        </p>
+    </div>
+</template>
+<script>
+export default{
+    data(){
+        return{
+            isDone:false,
+        }
+    }
+}
+</script>
+<style>
+.done{
+    color:green;
+    text-decoration: line-through;
+}
+</style>
